@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version         = '5.0'
 
-  s.source_files = 'ModularSDK/**/*.{swift}'
+  s.source_files = '**/*.swift'
 end
