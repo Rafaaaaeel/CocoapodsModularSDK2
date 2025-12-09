@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ModularSDK'
-  s.version          = '1.0.11'
+  s.version          = '1.0.12'
   s.summary          = 'Modular SDK example.'
   s.description      = <<-DESC
                         Um SDK modular simples contendo apenas uma classe ModularSDK.start()
@@ -33,5 +33,14 @@ Pod::Spec.new do |s|
   #   'CODE_SIGNING_REQUIRED' => 'NO'
   # }
   end
-  
+
+  s.subspec 'Network' do |sp|
+  sp.dependency 'ModularSDK/Core'
+  sp.source_files = 'Sources/Network/**/*.{swift,h,m}'
+  # sp.pod_target_xcconfig = {
+  #   'INFOPLIST_FILE' => 'SuperSDK_Chat/Info.plist',
+  #   'CODE_SIGNING_ALLOWED' => 'NO',
+  #   'CODE_SIGNING_REQUIRED' => 'NO'
+  # }
+  end
 end
