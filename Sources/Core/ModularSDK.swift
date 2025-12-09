@@ -1,21 +1,15 @@
 public enum ModularSDK {
     public static func start() {
-        runChatIfAvailable()
-        runNetworkIfAvailable()
+        run("ModularSDK_Chat.Chat")
+        run("ModularSDK_Network.Network")
     }
 }
 
 private extension ModularSDK {
 
-    static func runChatIfAvailable() {
-        guard let chatType = NSClassFromString("ChatModule.Chat") as? NSObject.Type else { return }
-        let instance = chatType.init()
-        instance.perform(NSSelectorFromString("execute"))
-    }
-
-    static func runNetworkIfAvailable() {
-        guard let netType = NSClassFromString("NetworkModule.Network") as? NSObject.Type else { return }
-        let instance = netType.init()
+    static func run(_ className: String) {
+        guard let type = NSClassFromString(className) as? NSObject.Type else { return }
+        let instance = type.init()
         instance.perform(NSSelectorFromString("execute"))
     }
 }
