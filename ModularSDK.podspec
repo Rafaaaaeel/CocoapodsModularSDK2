@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ModularSDK'
-  s.version          = '1.0.20'
+  s.version          = '1.0.21'
   s.summary          = 'Modular SDK example.'
   s.description      = <<-DESC
                         Um SDK modular simples contendo apenas uma classe ModularSDK.start()
@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Logging' do |sp|
     sp.dependency 'ModularSDK/Core'
-    sp.source_files = 'Sources/Logging/**/*.{swift,h,m}'
-    sp.vendored_frameworks = 'Sentry.xcframework'
+    sp.source_files = 'Sources/Logging/**/*.{swift}'
+    sp.vendored_frameworks = 'Frameworks/Sentry.xcframework'
   end
 end
