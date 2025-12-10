@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ModularSDK'
-  s.version          = '1.0.17'
+  s.version          = '1.0.18'
   s.summary          = 'Modular SDK example.'
   s.description      = <<-DESC
                         Um SDK modular simples contendo apenas uma classe ModularSDK.start()
@@ -50,5 +50,6 @@ Pod::Spec.new do |s|
     sp.source = {
       :http => 'https://github.com/Rafaaaaeel/SuperSDK_Sentry/releases/download/1.0.0/Sentry.xcframework.zip'
     }
+    sp.vendored_frameworks = 'Sentry.xcframework'
   end
 end
