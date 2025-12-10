@@ -2,6 +2,7 @@ public enum ModularSDK {
     public static func start() {
         run("ModularSDK.Chat")
         run("ModularSDK.Network")
+        run("ModularSDK.Logging")
     }
 }
 

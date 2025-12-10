@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ModularSDK'
-  s.version          = '1.0.16'
+  s.version          = '1.0.17'
   s.summary          = 'Modular SDK example.'
   s.description      = <<-DESC
                         Um SDK modular simples contendo apenas uma classe ModularSDK.start()
@@ -42,5 +42,13 @@ Pod::Spec.new do |s|
   #   'CODE_SIGNING_ALLOWED' => 'NO',
   #   'CODE_SIGNING_REQUIRED' => 'NO'
   # }
+  end
+
+  s.subspec 'Logging' do |sp|
+    sp.dependency 'ModularSDK/Core'
+    sp.source_files = 'Sources/Logging/**/*.{swift,h,m}'
+    sp.source = {
+      :http => 'https://github.com/Rafaaaaeel/SuperSDK_Sentry/releases/download/1.0.0/Sentry.xcframework.zip'
+    }
   end
 end
