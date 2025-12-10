@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ModularSDK'
-  s.version          = '1.0.18'
+  s.version          = '1.0.19'
   s.summary          = 'Modular SDK example.'
   s.description      = <<-DESC
                         Um SDK modular simples contendo apenas uma classe ModularSDK.start()
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://example.com/ModularSDK'
   s.license          = 'MIT'     # Pode ser simples assim, sem arquivo
   s.author           = { 'YourName' => 'you@example.com' }
-  s.source           = { :git => 'https://example.com/ModularSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Rafaaaaeel/CocoapodsModularSDK2.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '13.0'
   s.swift_version         = '5.0'
@@ -47,9 +47,6 @@ Pod::Spec.new do |s|
   s.subspec 'Logging' do |sp|
     sp.dependency 'ModularSDK/Core'
     sp.source_files = 'Sources/Logging/**/*.{swift,h,m}'
-    sp.source = {
-      :http => 'https://github.com/Rafaaaaeel/SuperSDK_Sentry/releases/download/1.0.0/Sentry.xcframework.zip'
-    }
     sp.vendored_frameworks = 'Sentry.xcframework'
   end
 end
